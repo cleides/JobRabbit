@@ -1,0 +1,19 @@
+sequenceDiagram
+    participant E as Job: EmptySlot
+    participant R as Job: JobAdvertised
+    participant W as Job: WorkCompleted
+    participant P as Pending Payments
+
+    E ->> R: createJob()
+    Note right of E: Job Owner<br/>creates job.
+    R ->> W: createSubmission()
+    Note right of R: Job Hunter creates<br/>work submission.
+    alt Work Submission is Approved
+        W ->> E: acceptSubmission()
+        W -->> P: Payment now possible
+        Note right of R: Job Owner<br/>accepts submission.
+        Note over P: Job Hunter can <br/>withdraw Ether with<br/> JobHunterWithdraw().
+    else Work Submission is Rejected
+        W ->> R: rejectSubmission()
+        Note right of R: Job Owner<br/>rejects submission.
+    end

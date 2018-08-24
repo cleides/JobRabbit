@@ -1,0 +1,12 @@
+Goals:
+* Deploy your contract onto the Rinkeby test network.
+* Include a document called deployed_addresses.txt that describes where your contracts live on the test net.
+
+The JobRabbit contract has been deployed to Rinkeby as contract address 0xd1412Fc0035C622DfEC3Bf4AB6203D115Cf9E25b:
+
+https://rinkeby.etherscan.io/address/0xd1412fc0035c622dfec3bf4ab6203d115cf9e25b#code
+
+This was created by this transaction:
+
+https://rinkeby.etherscan.io/tx/0x2da7ee198029529daa4c9b926eac9dc35b6cc3ad2a7860e3ff3f72d627716c09
+
